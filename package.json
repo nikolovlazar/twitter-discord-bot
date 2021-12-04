@@ -2,10 +2,11 @@
   "name": "chakra-twitter-bot",
   "version": "1.0.0",
   "description": "A Twitter bot that searches for Chakra UI tweets and posts them in Discord.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "source": "src/index.js",
   "scripts": {
-    "build": "",
-    "start": "node index.js"
+    "start": "node dist/index.js",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "date-fns": "^2.27.0",
     "dotenv": "^10.0.0",
     "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
   }
 }

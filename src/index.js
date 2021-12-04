@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const CronJob = require('cron').CronJob;
 const Twit = require('twit');
@@ -28,3 +30,5 @@ stream.on('tweet', function (tweet) {
     }
   );
 });
+
+console.log('Twitter Stream Started!');
