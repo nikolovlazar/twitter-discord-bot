@@ -1,7 +1,7 @@
 {
-  "name": "chakra-twitter-bot",
+  "name": "twitter-discord-bot",
   "version": "1.0.0",
-  "description": "A Twitter bot that searches for Chakra UI tweets and posts them in Discord.",
+  "description": "A Twitter bot that searches for specific tweets and posts them in Discord.",
   "main": "dist/index.js",
   "source": "src/index.js",
   "scripts": {
@@ -10,17 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lazarnikolov94/chakra-twitter-bot.git"
+    "url": "git+https://github.com/lazarnikolov94/twitter-discord-bot.git"
   },
   "author": "Lazar Nikolov <lazar.nikolov.94@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lazarnikolov94/chakra-twitter-bot/issues"
+    "url": "https://github.com/lazarnikolov94/twitter-discord-bot/issues"
   },
-  "homepage": "https://github.com/lazarnikolov94/chakra-twitter-bot#readme",
+  "homepage": "https://github.com/lazarnikolov94/twitter-discord-bot#readme",
   "dependencies": {
     "axios": "^0.24.0",
-    "cron": "^1.8.2",
     "date-fns": "^2.27.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

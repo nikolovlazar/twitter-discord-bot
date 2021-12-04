@@ -2,7 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-const CronJob = require('cron').CronJob;
 const Twit = require('twit');
 const axios = require('axios').default;
 
@@ -10,9 +9,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get('/', (req, res) =>
-  res.send("This is Chakra UI's Twitter -> Discord Bot!")
-);
+app.get('/', (req, res) => res.send('The Twitter -> Discord Bot is running!'));
 
 app.listen(port, () => {
   console.log(`Starting Twitter Stream...`);
@@ -26,7 +23,9 @@ app.listen(port, () => {
     strictSSL: true, // optional - requires SSL certificates to be valid.
   });
 
-  var stream = T.stream('statuses/filter', { track: 'Chakra UI' });
+  var stream = T.stream('statuses/filter', {
+    track: process.env.TWITTER_QUERY,
+  });
 
   stream.on('tweet', function (tweet) {
     axios.post(
